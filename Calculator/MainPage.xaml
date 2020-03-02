@@ -26,18 +26,38 @@
         <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button7" Content="7"   FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button7_Click"/>
         <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button8" Content="8"  FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button8_Click"/>
         <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button9" Content="9" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button9_Click"/>
-        <Button Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonClear" Content="C" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonClear_Click"/>
+        
         <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button4" Content="4" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button4_Click"/>
         <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button5" Content="5" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button5_Click"/>
         <Button Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button6" Content="6" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button6_Click"/>
-        <Button Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonPlus" Content="+" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonPlus_Click"/>
+        
         <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button1" Content="1" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button1_Click"/>
         <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button2" Content="2" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button2_Click"/>
         <Button Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button3" Content="3" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button3_Click"/>
-        <Button Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonMinus" Content="-" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonMinus_Click"/>
-        <Button Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonEqual" Content="=" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonEqual_Click"/>
+        
         <Button Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonDecimal" Content="." FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonDecimal_Click"/>
         <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="button0" Content="0" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="button0_Click"/>
 
+        <Grid Grid.Row="1" Grid.Column="3" Grid.RowSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonPlus" Content="+" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonPlus_Click"/>
+            <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonClear" Content="C" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonClear_Click"/>
+            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonMinus" Content="-" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonMinus_Click"/>
+            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonEqual" Content="=" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonEqual_Click"/>
+            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonTimes" Content="*" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonTimes_Click"/>
+            <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="buttonDivide" Content="/" FontSize="72" FontFamily="Arial Black" FontWeight="Bold" Click="buttonDivide_Click"/>
+        </Grid>
+        
+        
     </Grid>
 </Page>

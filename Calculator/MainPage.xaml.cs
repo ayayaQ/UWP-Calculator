@@ -24,6 +24,9 @@ namespace Calculator
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        const int MAX_CHAR = 19;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -36,8 +39,7 @@ namespace Calculator
 
         private void button0_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "0";
+            appendClick("0");
         }
 
 
@@ -56,79 +58,86 @@ namespace Calculator
                 resultText = result.ToString();
             }
 
+            if (resultText == "∞")
+                resultText = "You can't divide by zero.";
+
             equationText.Text = resultText;
         }
 
         private void buttonMinus_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "-";
+            appendClick("-");
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "1";
+            appendClick("1");
         }
 
         private void button7_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "7";
+            appendClick("7");
         }
 
         private void button8_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "8";
+            appendClick("8");
         }
 
         private void button9_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "9";
+            appendClick("9");
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "4";
+            appendClick("4");
         }
 
         private void button5_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "5";
+            appendClick("5");
         }
 
         private void button6_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "6";
+            appendClick("6");
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "2";
+            appendClick("2");
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "3";
+            appendClick("3");
         }
 
         private void buttonPlus_Click(object sender, RoutedEventArgs e)
         {
-            if (equationText.Text.Length < 19)
-                equationText.Text += "+";
+            appendClick("+");
         }
 
         private void buttonDecimal_Click(object sender, RoutedEventArgs e)
         {
-            if(equationText.Text.Length < 19)
-                equationText.Text += ".";
+            appendClick(".");
+        }
+
+        private void buttonDivide_Click(object sender, RoutedEventArgs e)
+        {
+            appendClick("/");
+        }
+
+        private void buttonTimes_Click(object sender, RoutedEventArgs e)
+        {
+            appendClick("*");
+        }
+
+        private void appendClick(String item)
+        {
+            if (equationText.Text.Length < MAX_CHAR)
+                equationText.Text += item;
         }
     }
 }
