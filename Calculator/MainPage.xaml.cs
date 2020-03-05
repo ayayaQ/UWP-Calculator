@@ -27,9 +27,14 @@ namespace Calculator
 
         const int MAX_CHAR = 19;
 
+        Button[] buttons;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            buttons = new Button[] { button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonDecimal, buttonClear, buttonMinus, buttonPlus, buttonDivide, buttonTimes, buttonEqual };
+            
         }
 
         private void buttonClear_Click(object sender, RoutedEventArgs e)
@@ -43,7 +48,7 @@ namespace Calculator
         }
 
 
-        private async void buttonEqual_Click(object sender, RoutedEventArgs e)
+        private void buttonEqual_Click(object sender, RoutedEventArgs e)
         {
             DataTable dataTable = new DataTable();
             String resultText;
@@ -138,6 +143,28 @@ namespace Calculator
         {
             if (equationText.Text.Length < MAX_CHAR)
                 equationText.Text += item;
+        }
+
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (e.NewSize.Height < 505)
+            {
+                buttonFontSizeSet(24);
+            } else if (e.NewSize.Height >= 650)
+            {
+                buttonFontSizeSet(72);
+            } else if (e.NewSize.Height < 650)
+            {
+                buttonFontSizeSet(48);
+            }
+        }
+
+        private void buttonFontSizeSet(int size)
+        {
+            foreach (Button button in buttons)
+            {
+                button.FontSize = size;
+            }
         }
     }
 }
